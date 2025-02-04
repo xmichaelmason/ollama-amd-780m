@@ -11,7 +11,7 @@ services:
     security_opt:
       - seccomp=unconfined
     volumes:
-      - ollama:/root/.ollama
+      - ./ollama:/root/.ollama
     ports:
       - "11434:11434"
 
@@ -24,7 +24,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
-      - open-webui:/app/backend/data
+      - ./open-webui:/app/backend/data
 
 volumes:
   ollama:
